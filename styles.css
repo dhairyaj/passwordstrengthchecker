@@ -1,0 +1,63 @@
+*, *::before, *::after {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: hsl(261, 88%, 17%);
+    color: hsl(261, 88%, 90%);
+    text-align: center;
+    height: 100vh;
+}
+
+.container h1 {
+    padding-top: 3rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    padding-bottom: 1rem;
+}
+
+.strength-meter {
+    position: relative;
+    height: 2rem;
+    width: 90%;
+    border: 3px solid hsl(261, 88%, 57%);
+    border-radius: 1rem;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  
+  .strength-meter::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: calc(1% * var(--strength, 0));
+    background-color: hsl(261, 88%, 67%);
+  
+    transition: width 200ms;
+  }
+  
+  .password-input {
+    margin-top: 1rem;
+    width: 90%;
+    padding: .25rem .75rem;
+    background-color: hsl(261, 88%, 25%);
+    color: white;
+    border: 1px solid hsl(261, 88%, 57%);
+    outline: none;
+    text-align: center;
+    border-radius: .5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .password-input:focus {
+    border-color: hsl(261, 88%, 70%);
+  }
+  
+  .reasons > * {
+    margin-top: 1rem;
+    color: hsl(261, 88%, 80%);
+  }
